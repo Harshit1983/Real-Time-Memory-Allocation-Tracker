@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Real-Time Memory Tracker</h1>
+        </div>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h3>System Memory</h3>
+                <div class="memory-value" id="total-memory">Calculating...</div>
+                <div class="memory-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Used</div>
+                        <div class="stat-value" id="used-memory">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Free</div>
+                        <div class="stat-value" id="free-memory">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Usage</div>
+                        <div class="stat-value" id="memory-usage">-</div>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="system-memory-progress"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Memory Details</h3>
+                <div class="memory-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">Swap Used</div>
+                        <div class="stat-value" id="swap-used">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Cache</div>
+                        <div class="stat-value" id="cache-memory">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Buffer</div>
+                        <div class="stat-value" id="buffer-memory">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Performance Metrics</h3>
+                <div class="memory-stats">
+                    <div class="stat-item">
+                        <div class="stat-label">CPU Usage</div>
+                        <div class="stat-value" id="cpu-usage">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">Page Load</div>
+                        <div class="stat-value" id="page-load">-</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-label">FPS</div>
+                        <div class="stat-value" id="fps">-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-list">
+            <h3>Top Memory Processes</h3>
+            <div id="process-list">
+                <div class="process-item">
+                    <span class="process-name">Loading processes...</span>
+                    <span class="process-memory">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="memoryChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
+</html> 
